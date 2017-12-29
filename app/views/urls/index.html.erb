@@ -9,7 +9,7 @@
           <td> <%= link_to url.long_url, url.long_url %> </td>     
           <td> <%= link_to url.short_url, url.short_url %> </td>
           <td> <%= link_to "Show", url_path(url) %> </td>
-
+          <td><%= link_to 'Delete', url_path(url), method: :delete, data: { confirm: 'Are you sure?'} %></td>
     </tr>   
 <% end %>
 </table>
@@ -17,3 +17,6 @@
 <p>
 <%= link_to "Shorten a Url", new_url_path %>
 </p>
+
+
+
